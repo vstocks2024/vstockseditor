@@ -54,7 +54,7 @@ export const Alignment =  observer(() => {
           <h3>Alignment</h3>
           <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
 </section>
-{expand  ? <section className={`cursor-pointer px-2 py-3 w-[233px] max-w-[233px] h-[96px] max-h-[96px] border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
+{expand  ? <section className={`cursor-pointer px-2 py-3 w-[233px] max-w-[233px] h-[96px] max-h-[96px] border-white dark:border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
       <div className='block w-[209px] max-w-[209px] h-10 max-h-10'>
      <button className='w-[40px] h-[40px]' type='button' onClick={handleAlignHorizontalLeft}>
           <span><MdAlignHorizontalLeft className={`cursor-pointer `} size={24}/></span>

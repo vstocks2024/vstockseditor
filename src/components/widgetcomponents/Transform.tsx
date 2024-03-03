@@ -75,7 +75,7 @@ export const Transform = observer(() => {
           <h3>Transform</h3>
           <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
       </section>
-      {expand   ? <section className={`cursor-pointer px-2 py-3 border-white bg-[#202020] ${expand ? "bordet-b-[0.2px]":"border-none"}`}>
+      {expand   ? <section className={`cursor-pointer px-2 py-3 border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
         <div className='flex flex-row py-2 items-center   text-gray-500 gap-2'>
           <div  className='flex flex-col gap-1'>
             <div className='w-12 min-w-[48px] gap-2 block font-semibold text-center items-center py-1 text-xs'>

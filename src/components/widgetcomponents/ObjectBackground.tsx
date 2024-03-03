@@ -36,11 +36,11 @@ export const ObjectBackground = observer(() => {
 
     return (
       <>
-      <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"bordet-b-[0.2px]"}`}>
+      <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"border-b-[0.2px]"}`}>
           <h3>Background</h3>
           <button><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
       </section>
-   {expand ? <section className={`cursor-pointer px-3 py-2 border-white bg-[#202020] ${expand ? "bordet-b-[0.2px]":"border-none"}`}>
+   {expand ? <section className={`cursor-pointer px-3 py-2 border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
       <form noValidate className='flex flex-row items-center'>
         <input type='checkbox' onChange={handleCheckBox} ref={reftextboxbgcolor}   className='bg-transparent accent-black size-4 border text-xs'/>
         <div className='flex text-xs  box-border flex-row my-2 h-[28px]'>

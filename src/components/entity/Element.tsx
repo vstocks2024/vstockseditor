@@ -28,7 +28,7 @@ export const Element = observer((props: ElementProps) => {
         backgroundColor: bgColor,
         
       }}
-      className={`flex text-xs border-b-2 pb-1 my-1 border-gray-900 flex-row justify-start items-center ${bgColor} w-full`}
+      className={`flex text-xs border-b-[0.2px] my-1 border-gray-900 flex-row justify-start items-center ${bgColor} w-full`}
       key={element.id}
       onClick={() => {
         store.setSelectedElement(element);
