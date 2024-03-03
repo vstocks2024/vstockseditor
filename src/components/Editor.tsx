@@ -72,10 +72,10 @@ export const Editor = observer(() => {
        {store.selectedMenuOption ? <Resources/> :null}
         <MainCanvas/>
         <ElementsPanel elementtype={store.selectedElement?.type} />
-        <TimeLine />
         </div>
+        <CanvasFooter/>
+        <TimeLine />
       </main>
-      {/* <CanvasFooter/> */}
     </React.Fragment>
   );
 });

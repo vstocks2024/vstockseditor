@@ -5,7 +5,7 @@ import { FaMinus,FaPlus } from "react-icons/fa";
 
 export const CanvasFooter = () => {
   return (
-    <div className='flex bg-black  justify-end w-[1349px] h-10 px-4 '>
+    <div className='flex bg-[#202020]  justify-end w-[1349px] h-10 px-4 '>
       <div className='flex flex-row w-[138px]  h-10 gap-1'>
         <button className='w-10 h-10 '><span> <FaMinus size={18}/></span><span></span><span></span></button>
         <div className='w-[50px] h-10'>
