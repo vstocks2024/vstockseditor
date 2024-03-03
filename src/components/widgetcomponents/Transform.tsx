@@ -71,11 +71,11 @@ export const Transform = observer(() => {
     }
     return (
       <>
-       <section onClick={()=>setExpand(!expand)} className={`cursor-pointer font-semibold flex flex-row justify-between items-center text-xs bg-[#151515] pl-3 pr-2 border-black ${expand===true ? "border-none":"border-b-2"}`}>
+       <section onClick={()=>setExpand(!expand)} className={`cursor-pointer font-semibold flex flex-row justify-between items-center text-xs bg-[#151515] pl-3 pr-2 border-white ${expand===true ? "border-none":"border-b-2"}`}>
           <h3>Transform</h3>
           <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
       </section>
-      {expand   ? <section className={`cursor-pointer px-2 py-3 border-gray-900 bg-[#202020] ${expand ? "border-b-2":"border-none"}`}>
+      {expand   ? <section className={`cursor-pointer px-2 py-3 border-white bg-[#202020] ${expand ? "border-b-2":"border-none"}`}>
         <div className='flex flex-row py-2 items-center   text-gray-500 gap-2'>
           <div  className='flex flex-col gap-1'>
             <div className='w-12 min-w-[48px] gap-2 block font-semibold text-center items-center py-1 text-xs'>
