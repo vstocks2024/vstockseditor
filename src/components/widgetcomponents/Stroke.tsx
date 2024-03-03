@@ -92,7 +92,7 @@ export const Stroke =  observer(() => {
                 </div>
                 <div className=' flex flex-col ml-3 w-12 h-7 items-center'>
                    <label className='w-12 flex items-center text-center text-[11px] h-[14px] text-[#999999]' htmlFor='width'>Width</label>
-                   <input onChange={handleTextBoxStrokeWidth} value={store.selectedElement?.placement.strokeWidth ? store.selectedElement.placement.strokeWidth : null} className='w-12 h-5 focus:outline-none text-sm bg-transparent border-b'/>
+                   <input onChange={handleTextBoxStrokeWidth} value={store.selectedElement?.placement.strokeWidth ? store.selectedElement.placement.strokeWidth : undefined} className='w-12 h-5 focus:outline-none text-sm bg-transparent border-b'/>
                     <span className=' flex flex-col h-10 w-2 self-stretch'></span> 
                 </div>
                 <button className=' flex justify-end items-center  h-10 w-10'><span><MdColorLens size={24}/></span><span></span><span></span></button>
@@ -120,7 +120,7 @@ export const Stroke =  observer(() => {
                 </div>
                 <div>
                     <label htmlFor='Milter' className='text-[11px] w-fit font-semibold text-[#999999]'>Milter</label>
-                    <input value={store.selectedElement?.placement.strokeMiterLimit ? store.selectedElement.placement.strokeMiterLimit :null} onChange={handleTextBoxStrokeMiterLimit} disabled={store.selectedElement?.placement.strokeLineJoin ? store.selectedElement.placement.strokeLineJoin==="milter" ? false : true : true } className='w-12 h-5 focus:outline-none text-sm bg-transparent border-b'/>
+                    <input value={store.selectedElement?.placement.strokeMiterLimit ? store.selectedElement.placement.strokeMiterLimit : undefined} onChange={handleTextBoxStrokeMiterLimit} disabled={store.selectedElement?.placement.strokeLineJoin ? store.selectedElement.placement.strokeLineJoin==="milter" ? false : true : true } className='w-12 h-5 focus:outline-none text-sm bg-transparent border-b'/>
                 </div>
             </section>
         
