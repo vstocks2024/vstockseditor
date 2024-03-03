@@ -32,7 +32,7 @@ export const Opacity = observer(() => {
          <div className='flex-1 grow shrink basis-0'><input id="slider" value={store.selectedElement?.placement.opacity ? store.selectedElement?.placement.opacity*100 : 0 } onChange={handleChangeSlider}  className=' appearance-none block rounded-s-lg  accent-black cursor-pointer h-2 ' type="range" max="100" min="0"/></div>
          <div className='flex flex-col'>
           <label className='text-[10px] max-w-[48px]  max-h-[14px]' htmlFor='opacity'>Opacity</label>
-          <input className='text-sm max-w-[48px] max-h-5' ref={refPercent} disabled value={store.selectedElement?.placement.opacity ? store.selectedElement.placement.opacity*100:0}  id="opacity" type='text' />
+          <input className='max-w-[48px] max-h-5 text-xs' ref={refPercent} disabled value={store.selectedElement?.placement.opacity ? store.selectedElement.placement.opacity*100:0}  id="opacity" type='text' />
          </div>
          <span>%</span>
          </div>

@@ -62,7 +62,7 @@ const MENU_OPTIONS = [
     name: "Text",
     icon: MdTitle,
     action: (store: Store) => {
-      store.setSelectedMenuOption("Text")
+      store.addText({text:"Start Typing",fontSize:20,fontWeight:600});
     },
   },
   {

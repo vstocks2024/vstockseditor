@@ -23,8 +23,9 @@ export const Font = observer(() => {
       try{
         if(!store.selectedElement) return;
         if(!reftextcolorfill.current) return;
-        if(!event.target.checked) return;
-        store.setTextBoxFill(store.selectedElement,reftextcolorfill.current.value);
+        if(!reftextcolorfill.current.checked) return;
+        if(!event.target) return;
+        store.setTextBoxFill(store.selectedElement,event.target.value);
       }
       catch(err){
         console.log(err);
@@ -141,9 +142,9 @@ export const Font = observer(() => {
           </div>
         </div>
         <div className='flex flex-row items-center'>
-        <input type='checkbox' onChange={handleTextBoxFill}     className='bg-transparent w-[16px] h-[16px] border text-xs '/>
+        <input type='checkbox' ref={reftextcolorfill}   className='bg-transparent w-[16px] h-[16px] border text-xs '/>
         <div className='flex text-xs  box-border flex-row my-2 h-[28px]'>
-          <input type='color' ref={reftextcolorfill}   className='bg-transparent border-none mx-2 mt-[2.5px] align-middle w-[24px] h-[24px] ' />
+          <input type='color' onChange={handleTextBoxFill}      className='bg-transparent border-none mx-2 mt-[2.5px] align-middle w-[24px] h-[24px] ' />
           <label  htmlFor='Background Color' className='pt-[6.4px] items-center align-middle'>Text Color</label>
           <span className='grow shrink basis-0 w-[90px]  self-stretch '></span>
           </div>

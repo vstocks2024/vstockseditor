@@ -1553,9 +1553,9 @@ shadow:newShadow};
         name: `Text ${index + 1}`,
         type: "text",
         placement: {
-          x: 0,
-          y: 0,
-          width: 100,
+          x:300,
+          y:200,
+          width: 200,
           height: 100,
           rotation: 0,
           scaleX: 1,

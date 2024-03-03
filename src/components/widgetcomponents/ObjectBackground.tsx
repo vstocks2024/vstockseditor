@@ -9,17 +9,7 @@ export const ObjectBackground = observer(() => {
     const store = React.useContext(StoreContext);
     const reftextboxbgcolor=React.useRef<HTMLInputElement>(null);
     
-    const handleCheckBox=(event:React.ChangeEvent<HTMLInputElement>)=>{
-        if(!store.selectedElement) return;
-        if(!event.target) return;
-        if(event.target.checked){
-        if(!reftextboxbgcolor.current) return;
-        store.setTextBoxBackgroundColor(store.selectedElement,reftextboxbgcolor.current.value);
-        }
-        else{
-            store.setTextBoxBackgroundColor(store.selectedElement,undefined)
-        }
-    }
+
     const handleTextBoxBackgroundColor=(event:React.ChangeEvent<HTMLInputElement>)=>{
         try{
             
@@ -42,7 +32,7 @@ export const ObjectBackground = observer(() => {
       </section>
    {expand ? <section className={`cursor-pointer px-3 py-2 border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
       <form noValidate className='flex flex-row items-center'>
-        <input type='checkbox' onChange={handleCheckBox} ref={reftextboxbgcolor}   className='bg-transparent accent-black size-4 border text-xs'/>
+        <input type='checkbox' ref={reftextboxbgcolor}   className='bg-transparent accent-black size-4 border text-xs'/>
         <div className='flex text-xs  box-border flex-row my-2 h-[28px]'>
           <input type='color' onChange={handleTextBoxBackgroundColor} id='textboxbgfill'  className='bg-transparent border-none mx-2 mt-[2.5px] align-middle w-[24px] h-[24px] ' />
           <label  htmlFor='Background Color' className='pt-[6.4px] items-center align-middle'>Background Color</label>
