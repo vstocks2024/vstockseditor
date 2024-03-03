@@ -29,11 +29,11 @@ export const TextShadow =  observer(() => {
   }
   return (
     <>
-    <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"border-b-2"}`}>
+    <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"bordet-b-[0.2px]"}`}>
         <h3>Shadow</h3>
         <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
     </section>
-    {expand ? <section className={`cursor-pointer max-w-[233px] px-3 py-2  flex flex-row border-white bg-[#202020] ${expand ? "border-b-2":"border-none"}`}>
+    {expand ? <section className={`cursor-pointer max-w-[233px] px-3 py-2  flex flex-row border-white bg-[#202020] ${expand ? "bordet-b-[0.2px]":"border-none"}`}>
       <form className='flex flex-col' >
         <div className='flex items-center'>
         <input type='checkbox'  className='w-4 h-4  accent-white bg-transparent cursor-pointer border-[0.1px] '/>

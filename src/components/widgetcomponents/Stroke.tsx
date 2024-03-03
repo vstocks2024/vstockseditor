@@ -74,11 +74,11 @@ export const Stroke =  observer(() => {
     }
   return (
     <>
-    <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"border-b-2"}`}>
+    <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"bordet-b-[0.2px]"}`}>
         <h3>Stroke</h3>
         <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
     </section>
-    {expand   ? <section className={`cursor-pointer px-2 py-3 border-white bg-[#202020] ${expand ? "border-b-2":"border-none"}`}>
+    {expand   ? <section className={`cursor-pointer px-2 py-3 border-white bg-[#202020] ${expand ? "bordet-b-[0.2px]":"border-none"}`}>
         <div className='flex flex-col gap-3'>
         <form onSubmit={()=>{addEventListener("submit",(event)=>{event.preventDefault()})}} action={"#"} noValidate autoComplete='off' className='flex flex-col gap-3 max-w-[209px] max-h-[176px]'>
             <section className=' flex items-center w-[233px] h-[40px] min-w-[233px] min-h-[40px]'>
