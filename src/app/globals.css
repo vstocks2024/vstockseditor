@@ -1,5 +1,11 @@
 @tailwind base;
 @tailwind components;
+
+.comphead{
+  @apply cursor-pointer font-semibold flex flex-row justify-between items-center text-xs bg-[#151515] pl-3 pr-2 border-white
+}
+
+
 @tailwind utilities;
 
 

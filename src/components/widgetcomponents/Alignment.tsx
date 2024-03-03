@@ -50,11 +50,11 @@ export const Alignment =  observer(() => {
     
 
   return ( <>
-<section onClick={()=>setExpand(!expand)} className={`cursor-pointer font-semibold flex flex-row justify-between items-center text-xs bg-[#151515] pl-3 pr-2 border-white ${expand===true ? "border-none":"border-b-2"}`}>
+<section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"border-b-[0.2px]"}`}>
           <h3>Alignment</h3>
           <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
 </section>
-{expand  ? <section className={`cursor-pointer px-2 py-3 w-[233px] max-w-[233px] h-[96px] max-h-[96px] border-white bg-[#202020] ${expand ? "border-b-2":"border-none"}`}>
+{expand  ? <section className={`cursor-pointer px-2 py-3 w-[233px] max-w-[233px] h-[96px] max-h-[96px] border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
       <div className='block w-[209px] max-w-[209px] h-10 max-h-10'>
      <button className='w-[40px] h-[40px]' type='button' onClick={handleAlignHorizontalLeft}>
           <span><MdAlignHorizontalLeft className={`cursor-pointer `} size={24}/></span>

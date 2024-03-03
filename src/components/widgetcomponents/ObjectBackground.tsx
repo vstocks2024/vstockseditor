@@ -36,7 +36,7 @@ export const ObjectBackground = observer(() => {
 
     return (
       <>
-      <section onClick={()=>setExpand(!expand)} className={`cursor-pointer font-semibold flex flex-row justify-between items-center text-xs bg-[#151515] pl-3 pr-2 border-white ${expand===true ? "border-none":"border-b-2"}`}>
+      <section onClick={()=>setExpand(!expand)} className={`comphead ${expand===true ? "border-none":"border-b-2"}`}>
           <h3>Background</h3>
           <button><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
       </section>
