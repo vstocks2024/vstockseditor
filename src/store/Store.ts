@@ -1949,9 +1949,7 @@ shadow:newShadow};
             flipY:element.placement.flipY,
             angle:element.placement.rotation,
 
-            fontSize: element.properties.fontSize,
-            fontWeight: element.properties.fontWeight,
-            fontFamily:element.properties.fontFamily,
+      
             
             textAlign:element.placement.textAlign,
             underline:element.placement.underline,
@@ -2030,9 +2028,7 @@ shadow:newShadow};
                 ...element.properties,
                 // @ts-ignore
                 text: target.text ?? element.properties.text,
-                fontSize:target.fontSize ?? element.properties.fontSize,
-                fontWeight:target.fontWeight ?? element.properties.fontWeight,
-                fontFamily:target.fontFamily ?? element.properties.fontFamily,
+              
                 
                 
               },
