@@ -1541,9 +1541,9 @@ shadow:newShadow};
 
   }
   addText(options: {
-    text: string,
-    fontSize: number,
-    fontWeight: number
+    text: string ,
+    fontSize: number | undefined,
+    fontWeight: string | number | undefined
   }) {
     const id = getUid();
     const index = this.editorElements.length;
@@ -1593,6 +1593,7 @@ shadow:newShadow};
           text: options.text,
           fontSize: options.fontSize,
           fontWeight: options.fontWeight,
+          fontFamily:undefined,
           splittedTexts: []
         },
         fabricObject: new fabric.Object
@@ -1947,8 +1948,11 @@ shadow:newShadow};
             flipX:element.placement.flipX,
             flipY:element.placement.flipY,
             angle:element.placement.rotation,
+
             fontSize: element.properties.fontSize,
             fontWeight: element.properties.fontWeight,
+            fontFamily:element.properties.fontFamily,
+            
             textAlign:element.placement.textAlign,
             underline:element.placement.underline,
             overline:element.placement.overline,
@@ -2015,6 +2019,9 @@ shadow:newShadow};
               strokeLineJoin:target.strokeLineJoin ?? placement.strokeLineJoin,
               strokeMiterLimit:target.strokeMiterLimit ?? placement.strokeMiterLimit,
               shadow:target.shadow ?? placement.shadow,
+              
+              
+
             };
             const newElement = {
               ...element,
@@ -2023,6 +2030,10 @@ shadow:newShadow};
                 ...element.properties,
                 // @ts-ignore
                 text: target.text ?? element.properties.text,
+                fontSize:target.fontSize ?? element.properties.fontSize,
+                fontWeight:target.fontWeight ?? element.properties.fontWeight,
+                fontFamily:target.fontFamily ?? element.properties.fontFamily,
+                
                 
               },
            

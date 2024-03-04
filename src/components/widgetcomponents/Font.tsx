@@ -17,8 +17,8 @@ export const Font = observer(() => {
     const reffamily=React.useRef<HTMLSelectElement>(null);
     const reftextcolorfill=React.useRef<HTMLInputElement>(null);
     
-
-
+    
+    
     const handleTextBoxFill=(event:React.ChangeEvent<HTMLInputElement>)=>{
       try{
         if(!store.selectedElement) return;

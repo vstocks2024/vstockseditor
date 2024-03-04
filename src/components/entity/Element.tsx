@@ -133,7 +133,7 @@ export const Element = observer((props: ElementProps) => {
           e.preventDefault();
           e.stopPropagation();
         }}>
-        <MdDelete  color="blue" size={20}/>
+        <MdDelete  color="#2E67DD" size={20}/>
       </button>
     </div>
   );

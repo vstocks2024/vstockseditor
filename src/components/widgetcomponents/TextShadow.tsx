@@ -33,7 +33,7 @@ export const TextShadow =  observer(() => {
         <h3>Shadow</h3>
         <button ><span>{expand ? <MdOutlineExpandLess  size={24}/> :<MdOutlineExpandMore size={24} />}</span></button>
     </section>
-    {expand ? <section className={`cursor-pointer max-w-[233px] px-3 py-2  flex flex-row border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
+    {expand ? <section className={`cursor-pointer px-2 py-3 border-white bg-[#202020] ${expand ? "border-b-[0.2px]":"border-none"}`}>
       <form className='flex flex-col' >
         <div className='flex items-center'>
         <input type='checkbox'  className='w-4 h-4  accent-white bg-transparent cursor-pointer border-[0.1px] '/>

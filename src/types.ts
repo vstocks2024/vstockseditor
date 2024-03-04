@@ -24,8 +24,9 @@ export type TextEditorElement = EditorElementBase<
   "text",
   {
     text: string;
-    fontSize: number;
-    fontWeight: number;
+    fontSize?: number | undefined;
+    fontWeight?: string | number | undefined;
+    fontFamily?: string | undefined;
     splittedTexts: fabric.Text[];
   }>;
 
@@ -60,6 +61,8 @@ export type Placement = {
   hasRotatingPoint?: boolean | undefined;
   lockMovementX?: boolean | undefined;
 
+  
+
   stroke?: string | undefined;
   strokeWidth?: number | undefined;
   strokeUniform?: boolean | undefined;
@@ -67,6 +70,7 @@ export type Placement = {
   strokeLineJoin?: string | undefined;
   strokeMiterLimit?: number | undefined;
   shadow?: Shadow | string | undefined;
+
 
 
   crossOrigin?: string | undefined;
