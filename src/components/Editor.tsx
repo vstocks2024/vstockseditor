@@ -33,6 +33,7 @@ export const Editor = observer(() => {
   
 
   useEffect(() => {
+    try{
     const canvas = new fabric.Canvas("lower-canvas", {
       height: store.height,
       width: store.width,
@@ -57,7 +58,10 @@ export const Editor = observer(() => {
     fabric.util.requestAnimFrame(function render() {
       canvas.renderAll();
       fabric.util.requestAnimFrame(render);
-    });
+    });}
+    catch(err){
+      console.log(err);
+    }
   }, []);
   return (
     <React.Fragment >

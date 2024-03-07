@@ -24,7 +24,7 @@ export const VideoResource = observer(
     {
       try{
       //console.log(videoname);
-      await axios.delete(`http://localhost:2020/videos/delete_videos/${videoname}`).then(resolve=>
+      await axios.delete(`http://localhost:8000/videos/delete_videos/${videoname}`).then(resolve=>
       {
         console.log(resolve)
       }).catch((err)=>

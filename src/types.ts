@@ -73,7 +73,7 @@ export type Placement = {
 
 
 
-  crossOrigin?: string | undefined;
+  // crossOrigin?: string | undefined;
 
 };
 export type TimeFrame = {

@@ -18,7 +18,7 @@ const init1=async ()=>
 {
   try{
 store.setVideos([]);
-await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_videos`)
+await axios.get(`http://localhost:8000/list_videos`)
 .then(async (resolve)=>{
   if(resolve.data.data?.length>0)
   {
@@ -77,7 +77,7 @@ await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_videos`)
     console.log(file.name);
     const formData=new FormData();
     formData.append("newvideo",file)
-    await axios.post(`https://d38u9dccxrq1p2.cloudfront.net/new_video`, formData, { headers: {'Content-Type': 'multipart/form-data'}}).then((resolve)=>
+    await axios.post(`http://localhost:8000/new_video`, formData, { headers: {'Content-Type': 'multipart/form-data'}}).then((resolve)=>
     {
       console.log(resolve);
       init1();
@@ -99,7 +99,7 @@ await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_videos`)
 
   return (
     <>
-    <div className=" overflow-auto">
+    <div className="w-auto">
       <div className="text-sm px-[16px] pt-[16px] pb-[8px] text-center font-semibold">
     Add Video
       </div>
@@ -109,7 +109,7 @@ await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_videos`)
     </div>
     <UploadButton
       accept="video/mp4,video/x-m4v,video/*"
-      className="bg-gray-300 w-auto hover:bg-gray-400 text-gray-800 font-bold text-center mx-2 py-2 px-4 rounded"
+      className="uploadbutton"
       onChange={handleFileChange}/>
       {/* <button onClick={init1}>init1</button> */}
       

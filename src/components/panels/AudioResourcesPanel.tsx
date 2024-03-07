@@ -13,7 +13,7 @@ export const AudioResourcesPanel = observer(() => {
 {
   try{
 store.setAudios([]);
-await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_audios`)
+await axios.get(`http://localhost:8000/list_audios`)
 .then(async (resolve)=>{
   if(resolve.data.data?.length>0)
   {
@@ -43,7 +43,7 @@ await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_audios`)
     console.log(file.name);
     const formData=new FormData();
     formData.append("newaudio",file)
-    await axios.post(`https://d38u9dccxrq1p2.cloudfront.net/new_audio`, formData, { headers: {'Content-Type': 'multipart/form-data'}})
+    await axios.post(`http://localhost:8000/new_audio`, formData, { headers: {'Content-Type': 'multipart/form-data'}})
     .then((resolve)=>
     {
       console.log(resolve);

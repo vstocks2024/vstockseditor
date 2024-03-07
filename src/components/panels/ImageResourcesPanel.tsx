@@ -13,7 +13,7 @@ export const ImageResourcesPanel = observer(() => {
 {
   try{
 store.setImages([]);
-await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_images`)
+await axios.get(`http://localhost:8000/list_images`)
 .then(async (resolve)=>{
   if(resolve.data.data?.length>0)
   {
@@ -67,7 +67,7 @@ await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_images`)
     if (!file) return;
     const formData=new FormData();
     formData.append("newimage", file)
-    await axios.post(`https://d38u9dccxrq1p2.cloudfront.net/new_image`, formData, { headers: {'Content-Type': 'multipart/form-data'}}).then((resolve)=>
+    await axios.post(`http://localhost:8000/new_image`, formData, { headers: {'Content-Type': 'multipart/form-data'}}).then((resolve)=>
     {
       console.log(resolve);
       init1();
@@ -92,7 +92,7 @@ await axios.get(`https://d38u9dccxrq1p2.cloudfront.net/list_images`)
       </div>
       <UploadButton
         accept="image/*"
-        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold text-center mx-2 py-2 px-4 rounded"
+        className=" uploadbutton"
         onChange={handleFileChange}/>
       {/* <button onClick={init1}>init</button> */}
     </>

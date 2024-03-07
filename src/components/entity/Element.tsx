@@ -98,14 +98,14 @@ export const Element = observer((props: ElementProps) => {
         className= "text-white mr-1 text-xs py-0 px-1 rounded"
         onClick={(e) => {
           // //handleLockButton();
-          // element.fabricObject.hasControls=!element.fabricObject.hasControls
-          // element.fabricObject.lockMovementX=!element.fabricObject.lockMovementX;
-          // element.fabricObject.lockMovementY=!element.fabricObject.lockMovementY;
-          // element.fabricObject.lockRotation=!element.fabricObject.lockRotation;
-          // element.fabricObject.lockScalingX=!element.fabricObject.lockScalingX;
-          // element.fabricObject.lockScalingY=!element.fabricObject.lockScalingY;
-          // element.fabricObject.lockSkewingX=!element.fabricObject.lockSkewingX;
-          // element.fabricObject.lockUniScaling=!element.fabricObject.lockUniScaling;
+          element.fabricObject.hasControls=!element.fabricObject.hasControls
+          element.fabricObject.lockMovementX=!element.fabricObject.lockMovementX;
+          element.fabricObject.lockMovementY=!element.fabricObject.lockMovementY;
+          element.fabricObject.lockRotation=!element.fabricObject.lockRotation;
+          element.fabricObject.lockScalingX=!element.fabricObject.lockScalingX;
+          element.fabricObject.lockScalingY=!element.fabricObject.lockScalingY;
+          element.fabricObject.lockSkewingX=!element.fabricObject.lockSkewingX;
+          element.fabricObject.lockUniScaling=!element.fabricObject.lockUniScaling;
           setLock(!lock);
           
           e.preventDefault();

@@ -1438,7 +1438,7 @@ shadow:newShadow};
           flipX: false,
           flipY: false,
           opacity: 1.0,
-          crossOrigin:"allow-credentials",
+          //crossOrigin:"allow-credentials",
         },
         timeFrame: {
           start: 0,
@@ -1483,8 +1483,8 @@ shadow:newShadow};
           strokeWidth: 1,
           strokeUniform: undefined,
           strokeLineCap: "butt",
-          shadow: new fabric.Shadow({ color: "blue", blur: 0.6, offsetX: 2, offsetY: 2 }),
-          crossOrigin: "allow-credentials",
+          //shadow: new fabric.Shadow({ color: "blue", blur: 0.6, offsetX: 2, offsetY: 2 }),
+          //crossOrigin: "allow-credentials",
         },
         timeFrame: {
           start: 0,
@@ -1525,7 +1525,7 @@ shadow:newShadow};
           flipX: false,
           flipY: false,
           opacity: 0,
-          crossOrigin:"allow-credentials",
+          //crossOrigin:"allow-credentials",
         },
         timeFrame: {
           start: 0,
@@ -1583,7 +1583,7 @@ shadow:newShadow};
           strokeLineJoin: "milter",
           strokeMiterLimit: 1,
           shadow: new fabric.Shadow({ color: "blue", blur: 0, offsetX: 0, offsetY: 0 }),
-          crossOrigin:"allow-credentials"
+          //crossOrigin:"allow-credentials"
         },
         timeFrame: {
           start: 0,
@@ -1679,7 +1679,7 @@ shadow:newShadow};
     let mp4 = this.selectedVideoFormat === 'mp4'
     const canvas = document.getElementById("lower-canvas") as HTMLCanvasElement;
     canvas
-    //canvas.crossOrigin="allow-credentials";
+    //canvas.//crossOrigin="allow-credentials";
     const stream = (canvas as HTMLCanvasElement).captureStream(30);
     const audioElements = this.editorElements.filter(isEditorAudioElement)
     const audioStreams: MediaStream[] = [];
@@ -1793,7 +1793,7 @@ shadow:newShadow};
             lockUniScaling: true,
         
             opacity:element.placement.opacity,
-            crossOrigin:element.placement.crossOrigin,
+            //crossOrigin:element.placement.//crossOrigin,
             // filters: filters,
             // @ts-ignore
             customFilter: element.properties.effect.type,
@@ -1828,7 +1828,7 @@ shadow:newShadow};
               flipX:target.flipX ??placement.flipX,
               flipY:target.flipY ?? placement.flipY,
               opacity:target.opacity ?? placement.opacity,
-              crossOrigin:target.crossOrigin ?? placement.crossOrigin,
+              //crossOrigin:target.//crossOrigin ?? placement.//crossOrigin,
    
             };
             const newElement = {
@@ -1867,7 +1867,7 @@ shadow:newShadow};
             strokeUniform:element.placement.strokeUniform,
             strokeLineCap:element.placement.strokeLineCap,
             shadow:element.placement.shadow,
-            crossOrigin:element.placement.crossOrigin,
+            //crossOrigin:element.placement.//crossOrigin,
             // filters
             // @ts-ignore
             customFilter: element.properties.effect.type,
@@ -1918,7 +1918,7 @@ shadow:newShadow};
               strokeUniform:target.strokeUniform ?? placement.strokeUniform,
               strokeLineCap:target.strokeLineCap ?? placement.strokeLineCap,
               shadow:target.shadow ?? placement.shadow,
-              crossOrigin:target.crossOrigin ?? placement.crossOrigin,
+              //crossOrigin:target.//crossOrigin ?? placement.//crossOrigin,
               
               
               
