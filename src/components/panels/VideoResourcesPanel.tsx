@@ -98,7 +98,7 @@ await axios.get(`http://localhost:8000/list_videos`)
   },[])
 
   return (
-    <>
+    <div className="items-center align-middle flex flex-col mx-2">
     <div className="w-auto">
       <div className="text-sm px-[16px] pt-[16px] pb-[8px] text-center font-semibold">
     Add Video
@@ -114,6 +114,6 @@ await axios.get(`http://localhost:8000/list_videos`)
       {/* <button onClick={init1}>init1</button> */}
       
      
-  </>);
+  </div>);
 });
 

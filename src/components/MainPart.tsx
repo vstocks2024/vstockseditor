@@ -41,7 +41,7 @@ export const MainPart=observer(()=> {
     const handleGetTemplateById=async()=>
     {
         try{
-            await axios.get(`http://localhost:8000/get_template_by_id/731eb9e3-8e42-4e8b-a61c-9f5f11972d19`)
+            await axios.get(`http://localhost:8000/get_template_by_id/43c98c13-9e26-49f6-81a7-6533b33975cd`)
             .then(async (resolve)=>{
                 store.setVideos([]);
                 store.removeAllEditorElements();

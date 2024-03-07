@@ -81,8 +81,9 @@ await axios.get(`http://localhost:8000/list_images`)
     init1();
   },[])
   return (
-    <>
-    <div className=" overflow-y-auto">
+    
+    <div className="items-center align-middle flex flex-col mx-2">
+    <div className="w-auto">
       <div className="text-sm px-[16px] pt-[16px] pb-[8px] font-semibold">
         Add Image
       </div>
@@ -95,6 +96,6 @@ await axios.get(`http://localhost:8000/list_images`)
         className=" uploadbutton"
         onChange={handleFileChange}/>
       {/* <button onClick={init1}>init</button> */}
-    </>
+    </div>
   );
 });
